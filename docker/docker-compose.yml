@@ -143,4 +143,6 @@ services:
             start_period: 30s
         volumes:
             - ~/.flowise:/root/.flowise
+        environment:
+            - FLOWISE_FILE_SIZE_LIMIT=100mb
         entrypoint: /bin/sh -c "sleep 3; flowise start"
